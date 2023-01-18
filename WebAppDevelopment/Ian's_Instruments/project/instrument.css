@@ -1,0 +1,170 @@
+/*css for each instrument page*/
+html, body {
+    height: 100%;
+    margin: 0px;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+header {
+    font-family: monospace, Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin: 0 auto;
+    padding: 20px 40px;
+    width: auto;
+    text-align: center;
+}
+#headerLink {
+    text-decoration: none;
+    color: rgb(75, 175, 205);
+    font-size: 50px;
+}
+h1 {
+	color: rgb(75, 175, 205);
+    font-size: 38px;
+    font-weight: bold;
+	margin: 0;
+    
+}
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+	color: rgb(75, 175, 205);
+	font-size: 24px;
+    margin: 24px;
+	padding: 0;
+}
+main {
+    flex: 1 1 auto;
+}
+label {
+	float: left;
+    width: 3em;
+    text-align: right;
+}
+input {
+    margin-left: 1em;
+    margin-bottom: .5em;
+}
+p {
+	margin: 0;
+}
+/*start of navigation bar*/
+.navBar {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(95, 95, 95, 0.881);
+    margin: auto;
+    width: auto;
+}
+.navTable {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(95, 95, 95, 0.881);
+    margin: 0 auto;
+    padding: 10px 20px;
+    width: auto;
+    border: 2px solid rgba(95, 95, 95, 0.881);
+}
+.naviRow {
+    background-color: rgba(95, 95, 95, 0.881);
+    padding: 30%;
+}
+.navi {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: white;
+    padding: 12px 100px;
+    background-color: rgba(95, 95, 95, 0.881);
+}
+.dropdownMenu {
+    border: none;
+    background-color: rgba(95, 95, 95, 0.881);
+    text-decoration: underline;
+    padding: 11px 11px;
+    font-size: 20px;
+    color:white;
+    text-align: center;
+}
+.menuOption{
+    text-align: left;
+    text-decoration: underline;
+}
+/*start of intro text*/
+.introDiv {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    padding: 10px 20px;
+    width: auto;
+}
+.p {
+    margin: 48px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+.audio {
+    margin: 0px 48px;
+}
+/*start of footer*/
+.footer {
+    flex-shrink: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(95, 95, 95, 0.881);
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.footer {
+    flex-shrink: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(95, 95, 95, 0.881);
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.footerNavi {
+    padding: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+/*start of instrument div*/
+.instrumentsDiv {
+    display: flex;
+    flex-wrap: wrap;
+}
+.instrument {
+    justify-content: space-between;
+    border: 2px solid rgb(231, 231, 231);
+}
+.instrumentImage {
+    height: auto;
+    width: 100%;
+}
+/*controls table*/
+.audioNotes{
+    display: none;
+}
+.controlTable{
+    width:500px;
+    height:200px;
+    background-color: black;
+}
+.controlHeader{
+    width: 100%;
+    align-items: center;
+    background-color: rgb(75, 175, 205);
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+.controlColumn{
+    width: 20%;
+    word-wrap: break-word;
+    align-items: center;
+    background-color: rgb(75, 175, 205);
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+.Note,.key{
+    text-align: center;
+    background-color: white;
+}

@@ -1,0 +1,91 @@
+<!doctype html>
+
+<html lang="en">
+
+<head id="head" class="head">
+    <meta charset="utf-8">
+	<title>Ian's Instruments</title>
+	<link rel="stylesheet" href="ianInstruments.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="slideshow.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <script src="navigation.js"></script>
+</head>
+
+<body id="body" class="body">
+    <main id="main" class="main">
+        <!--page header-->
+        <header id="pageTitle" class="header"><h1 id="h1" class="header"><a id="headerLink" href="index.html">Ian's Instruments</a></h1>
+            <noscript>Please enable javascript to use this webpage.</noscript>
+        </header>
+        <!--navigation bar-->
+        <nav id="navigationBar" class="navBar">
+            <div id="navBarDiv" class="div">
+                <table id="navTable" class="navTable">
+                    <tr id="naviRow" class="naviRow">
+                        <td><a href="index.html" id="linkHome" class="navi">Home</a></td>
+                        <td>
+                            <!--drop down menu to allow for better navigation to instruments
+                                functionality sourced from https://www.plus2net.com/javascript_tutorial/dropdown-redirect.php-->
+                            <select id="dropdownMenu" class="dropdownMenu">
+                                <option value="Instruments" selected disabled hidden id="dropdownDefault" class="menuOption">Instruments</option>
+                                <option value="Instruments Overview" id="insOve" class="menuOption">Instruments Overview</option>
+                                <option value="Acoustic Guitar" id="acoGui" class="menuOption">Acoustic Guitar</option>
+                                <option value="Bass Guitar" id="bassGui" class="menuOption">Bass Guitar</option>
+                                <option value="Electric Guitar" id="eleGui" class="menuOption">Electric Guitar</option>
+                            </select>
+                        </td>
+                        <td><a href="about.html" id="linkAbout" class="navi">About</a></td>
+                        <td><a href="contact.html" id="linkContact" class="navi">Contact</a></td>
+                    </tr>
+                </table>
+            </div>
+        </nav>
+        <!--Intro section of the page-->
+        <div id="introDiv" class="div">
+            <h2 id="welcomeHeader" class="h2">Welcome to Ian's Instruments!</h2>
+            <p id="introText" class="p">This website provides the ability to play some of the instruments that my little brother owns.
+                The instruments currently implemented are: acoustic guitar, electric guitar, and bass guitar. 
+                If you want more information on what instruments are available and how to play them, head over to the Instruments Overview page <a href="instrumentsOverview.html" id="textLink1" class="textLink">here</a>.
+                If you have any questions about the instruments themselves or this website, visit the About page <a href="about.html" id="textLink2" class="textLink">here</a>.
+            </p>
+        </div>
+        <br/>
+        <!--slideshow that displays all of the instruments available on the website-->
+        <!--display the text above the slideshow-->
+        <div id="slideshowTextDiv" class="div">
+            <h2 id="instrumentsHeader" class="h2">Instruments</h2>
+            <p id="slideshowText" class="p">Below are some of the instruments you can play on this website.</p>
+        </div>
+        <!--container for slideshow-->
+        <div id="slideshowDiv" >
+            <!--create a slideshow using bxslider-->
+            <ul class="bxslider">
+                <!--Acoustic Guitar-->
+                <li>
+                    <div id="slideshowNum1" class="slideshowNum">1/3</div>
+                    <img alt="acoustic_outlined.png" src="images/acoustic_outlined_90_trim.png" class="slideshowImage" title="Acoustic Guitar">
+                </li>
+                <!--Electric Guitar-->
+                <li>
+                    <div id="slideshowNum2" class="slideshowNum">2/3</div>
+                    <img alt="electric_outlined.png" src="images/electric_outlined_90_trim.png" class="slideshowImage" title="Electric Guitar">
+                </li>
+                <!--Bass Guitar-->
+                <li>
+                    <div id="slideshowNum3" class="slideshowNum">3/3</div>
+                    <img alt="bass_outlined.png" src="images/bass_outlined_90_trim.png" class="slideshowImage" title="Bass Guitar">
+                </li>
+            </ul>
+        </div>
+    </main>
+    <!--footer with navigation links-->
+    <footer id="footer" class="footer">
+        <a href="instrumentsOverview.html" id="linkPg1" class="footerNavi">Instruments Overview</a><br/>
+        <a href="about.html" id="linkPg2" class="footerNavi">About</a><br/>
+        <a href="contact.html" id="linkPg3" class="footerNavi">Contact</a><br/>
+    </footer>
+</body>
+
+<!--https://stackoverflow.com/questions/14102172/custom-mapping-of-a-image-for-jquery-actions-->

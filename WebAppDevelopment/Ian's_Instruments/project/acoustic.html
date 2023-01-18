@@ -1,0 +1,158 @@
+<!doctype html>
+
+<html lang="en">
+
+<head id="head" class="head">
+    <meta charset="utf-8">
+	<title>Ian's Instruments</title>
+	<link rel="stylesheet" href="instrument.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src='https://davidlynch.org/projects/maphilight/jquery.maphilight.js'></script>
+	<script src="navigation.js"></script>
+    <script src="acoustic.js"></script>
+</head>
+
+<body id="body" class="body">
+    <main id="main" class="main">
+        <!--page header-->
+        <header id="pageTitle" class="header"><h1 id="h1" class="header"><a id="headerLink" href="index.html" aria-label="Ian's Instruments">Ian's Instruments</a></h1>
+            <noscript>Please enable javascript to use this webpage.</noscript>
+        </header>
+        <!--navigation bar-->
+        <nav id="navigationBar" class="navBar" aria-label="Navigation">
+            <div id="navBarDiv" class="div">
+                <table id="navTable" class="navTable">
+                    <tr id="naviRow" class="naviRow">
+                        <td><a href="index.html" id="linkHome" class="navi" aria-label="Home">Home</a></td>
+                        <td>
+                            <!--drop down menu to allow for better navigation to instruments
+                                functionality sourced from https://www.plus2net.com/javascript_tutorial/dropdown-redirect.php-->
+                            <select id="dropdownMenu" class="dropdownMenu" aria-label="Instruments">
+                                <option value="Instruments" selected disabled hidden id="dropdownDefault" class="menuOption">Instruments</option>
+                                <option value="Instruments Overview" id="insOve" class="menuOption">Instruments Overview</option>
+                                <option value="Acoustic Guitar" id="acoGui" class="menuOption">Acoustic Guitar</option>
+                                <option value="Bass Guitar" id="bassGui" class="menuOption">Bass Guitar</option>
+                                <option value="Electric Guitar" id="eleGui" class="menuOption">Electric Guitar</option>
+                            </select>
+                        </td>
+                        <td><a href="about.html" id="linkAbout" class="navi" aria-label="About">About</a></td>
+                        <td><a href="contact.html" id="linkContact" class="navi" aria-label="Contact">Contact</a></td>
+                    </tr>
+                </table>
+            </div>
+        </nav>
+        <!--Intro section of the page-->
+        <div id="introDiv" class="div">
+            <h2 id="introHeader" class="h2">Acoustic Guitar</h2>
+            <p id="introText" class="p">This is a Martin acoustic guitar. This guitar was originally my grandfather's but Ian recieved it as a gift and has been 
+                playing it almost daily for years.
+            </p>
+        </div>
+        <!--Tabs for Controls and Demonstration information-->
+        <div id="tabs">
+            <ul>
+                <li><a href="#controlsDiv" aria-label="Instrument Controls"><p>Controls</p></a></li>
+                <li><a href="#demoDiv" aria-label="Instrument Demonstration"><p>Demonstration</p></a></li>
+            </ul>
+            <!--Demonstration tab-->
+            <div id="demoDiv" class="div">
+                <p id="demoText" class="p">Below is a demo of what Ian can do with this guitar. Give it a shot and let us know how it goes!</p><br/>
+                <audio controls id="demoAudio" class="audio">
+                    <source src="demos/AcusticDemo.wav" type="audio/wav" id="demoWav" class="audioFile">
+                    Your browser does not support the audio tag.
+                </audio><br/>
+                </div>
+            <!--Controls tab-->
+            <div id="controlsDiv" class="div">
+                <p id="controlText" class="p">To play the instrument, click on the strings where you would like to play a note or view the keyboard controls below. The notes are split into 3 frets of each string at the open, 7th, and 12th fret. Give it a try by clicking the 'S' key to play the A string at the 7th fret.</p>
+                <!--Table to display the keyboard controls-->
+                <table id="controlTable" class="controlTable">
+                    <!--table label-->
+                    <tr id="controlRow" class="controlRow">
+                        <th id="controlHeader" class="controlHeader" colspan="7">Controls</th>
+                    </tr>
+                    <!--note labels-->
+                    <tr id="noteRow" class="controlRow">
+                        <th id="NoteCol" class="controlColumn" rowspan="1">Note</th>
+                        <td id="ELow_note" class="Note">E</td>
+                        <td id="A_note" class="Note">A</td>
+                        <td id="D_note" class="Note">D</td>
+                        <td id="G_note" class="Note">G</td>
+                        <td id="B_note" class="Note">B</td>
+                        <td id="E_note" class="Note">E</td>
+                    </tr>
+                    <!--keyboard inputs for open note-->
+                    <tr id="openRow" class="controlRow">
+                        <th id="keyInput" class="controlColumn" rowspan="3">Keyboard Input</th>
+                        <td id="Q" class="key">Q</td>
+                        <td id="W" class="key">W</td>
+                        <td id="E" class="key">E</td>
+                        <td id="R" class="key">R</td>
+                        <td id="T" class="key">T</td>
+                        <td id="Y" class="key">Y</td>
+                    </tr>
+                    <!--keyboard inputs for 7th fret-->
+                    <tr id="7Row" class="controlRow">
+                        <td id="A" class="key">A</td>
+                        <td id="S" class="key">S</td>
+                        <td id="D" class="key">D</td>
+                        <td id="F" class="key">F</td>
+                        <td id="G" class="key">G</td>
+                        <td id="H" class="key">H</td>
+                    </tr>
+                    <!--keyboard inputs for 12th fret-->
+                    <tr id="12Row" class="controlRow">
+                        <td id="Z" class="key">Z</td>
+                        <td id="X" class="key">X</td>
+                        <td id="C" class="key">C</td>
+                        <td id="V" class="key">V</td>
+                        <td id="B" class="key">B</td>
+                        <td id="N" class="key">N</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--instrument section of the page-->
+        <div id="instrumentDiv" class="div">
+            <img src="images/acoustic_outlined_90_trim.png" alt="acoustic guitar" id="acousticImg" class="instrumentImage" usemap="#strings" aria-label="Acoustic Guitar">
+            <!--mapping for clickable boxes to outline the areas of the strings a sound will be played from-->
+            <map name="strings">
+                <!--Low E-->
+                <area id="1-0ELow" shape="poly" coords="674,258,818,250,819,264,674,272" href="#" alt="0_E_Low" class="note">
+                <area id="2-7ELow" shape="poly" coords="819,250,1030,240,1030,253,820,264" href="#" alt="7_E_Low" class="note">
+                <area id="3-12ELow" shape="poly" coords="1031,240,1344,228,1344,238,1031,253" href="#" alt="12_E_Low" class="note">
+                <!--B-->
+                <area id="4-0A" shape="poly" coords="674,273,818,265,820,279,675,287" href="#" alt="0_A" class="note">
+                <area id="5-7A" shape="poly" coords="819,265,1030,254,1031,267,821,279" href="#" alt="7_A" class="note">
+                <area id="6-12A" shape="poly" coords="1031,254,1344,238,1344,249,1032,267" href="#" alt="12_A" class="note">
+                <!--G-->
+                <area id="7-0D" shape="poly" coords="675,288,820,280,821,293,676,303" href="#" alt="0_D" class="note">
+                <area id="8-7D" shape="poly" coords="821,280,1031,268,1032,280,822,293" href="#" alt="7_D" class="note">
+                <area id="9-12D" shape="poly" coords="1032,268,1344,250,1344,260,1033,280" href="#" alt="12_D" class="note">
+                <!--D-->
+                <area id="10-0G" shape="poly" coords="676,304,821,294,822,308,677,318" href="#" alt="0_G" class="note">
+                <area id="11-7G" shape="poly" coords="822,294,1032,280,1033,292,823,308" href="#" alt="7_G" class="note">
+                <area id="12-12G" shape="poly" coords="1033,280,1344,260,1344,270,1033,292" href="#" alt="12_G" class="note">
+                <!--A-->
+                <area id="13-0B" shape="poly" coords="677,319,822,309,822,321,678,332" href="#" alt="0_B" class="note">
+                <area id="14-7B" shape="poly" coords="823,309,1033,293,1034,305,823,321" href="#" alt="7_B" class="note">
+                <area id="15-12B" shape="poly" coords="1034,293,1344,271,1344,281,1035,305" href="#" alt="12_B" class="note">
+                <!--E-->
+                <area id="16-0E" shape="poly" coords="678,333,822,322,822,334,679,345" href="#" alt="0_E" class="note">
+                <area id="17-7E" shape="poly" coords="823,322,1034,306,1035,314,823,332" href="#" alt="7_E" class="note">
+                <area id="18-12E" shape="poly" coords="1035,306,1344,282,1344,292,1035,315" href="#" alt="12_E" class="note">
+            </map>
+            <!--stores the audio files used for the map-->
+            <div id="audioFiles"></div>
+        </div>
+        <br/>
+    </main>
+    <!--footer with navigation links-->
+    <footer id="footer" class="footer">
+        <a href="instrumentsOverview.html" id="linkPg1" class="footerNavi">Instruments Overview</a><br/>
+        <a href="about.html" id="linkPg2" class="footerNavi">About</a><br/>
+        <a href="contact.html" id="linkPg3" class="footerNavi">Contact</a><br/>
+    </footer>
+</body>

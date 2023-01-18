@@ -1,0 +1,5 @@
+{
+    "acoustic":"/acoustic/1-0ELow.wav,/acoustic/2-7ELow.wav,/acoustic/3-12ELow.wav,/acoustic/4-0A.wav,/acoustic/5-7A.wav,/acoustic/6-12A.wav,/acoustic/7-0D.wav,/acoustic/8-7D.wav,/acoustic/9-12D.wav,/acoustic/10-0G.wav,/acoustic/11-7G.wav,/acoustic/12-12G.wav,/acoustic/13-0B.wav,/acoustic/14-7B.wav,/acoustic/15-12B.wav,/acoustic/16-0E.wav,/acoustic/17-7E.wav,/acoustic/18-12E.wav",
+    "bass":"/bass/1-0ELow.wav,/bass/2-7ELow.wav,/bass/3-12ELow.wav,/bass/4-0A.wav,/bass/5-7A.wav,/bass/6-12A.wav,/bass/7-0D.wav,/bass/8-7D.wav,/bass/9-12D.wav,/bass/10-0G.wav,/bass/11-7G.wav,/bass/12-12G.wav",
+    "electric":"/electric/1-0ELow.wav,/electric/2-7ELow.wav,/electric/3-12ELow.wav,/electric/4-0A.wav,/electric/5-7A.wav,/electric/6-12A.wav,/electric/7-0D.wav,/electric/8-7D.wav,/electric/9-12D.wav,/electric/10-0G.wav,/electric/11-7G.wav,/electric/12-12G.wav,/electric/13-0B.wav,/electric/14-7B.wav,/electric/15-12B.wav,/electric/16-0E.wav,/electric/17-7E.wav,/electric/18-12E.wav"
+}

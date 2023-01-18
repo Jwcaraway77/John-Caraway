@@ -1,0 +1,145 @@
+<!doctype html>
+
+<html lang="en">
+
+<head id="head" class="head">
+    <meta charset="utf-8">
+	<title>Ian's Instruments</title>
+	<link rel="stylesheet" href="instrument.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src='https://davidlynch.org/projects/maphilight/jquery.maphilight.js'></script>
+	<script src="navigation.js"></script>
+    <script src="bass.js"></script>
+</head>
+
+<body id="body" class="body">
+    <main id="main" class="main">
+        <!--page header-->
+        <header id="pageTitle" class="header">
+            <h1 id="h1" class="header">
+                <a id="headerLink" href="index.html" aria-label="Ian's Instruments">Ian's Instruments</a>
+            </h1>
+            <noscript>Please enable javascript to use this webpage.</noscript>
+        </header>
+        <!--navigation bar-->
+        <nav id="navigationBar" class="navBar" aria-label="Navigation">
+            <div id="navBarDiv" class="div">
+                <table id="navTable" class="navTable">
+                    <tr id="naviRow" class="naviRow">
+                        <td><a href="index.html" id="linkHome" class="navi">Home</a></td>
+                        <td>
+                            <!--drop down menu to allow for better navigation to instruments
+                                functionality sourced from https://www.plus2net.com/javascript_tutorial/dropdown-redirect.php-->
+                            <select id="dropdownMenu" class="dropdownMenu" aria-label="Instruments">
+                                <option value="Instruments" selected disabled hidden id="dropdownDefault" class="menuOption">Instruments</option>
+                                <option value="Instruments Overview" id="insOve" class="menuOption">Instruments Overview</option>
+                                <option value="Acoustic Guitar" id="acoGui" class="menuOption">Acoustic Guitar</option>
+                                <option value="Bass Guitar" id="bassGui" class="menuOption">Bass Guitar</option>
+                                <option value="Electric Guitar" id="eleGui" class="menuOption">Electric Guitar</option>
+                            </select>
+                        </td>
+                        <td><a href="about.html" id="linkAbout" class="navi" aria-label="About">About</a></td>
+                        <td><a href="contact.html" id="linkContact" class="navi" aria-label="Contact">Contact</a></td>
+                    </tr>
+                </table>
+            </div>
+        </nav>
+        <!--Intro section of the page-->
+        <div id="introDiv" class="div">
+            <h2 id="introHeader" class="h2">Bass Guitar</h2>
+            <p id="introText" class="p">This base guitar has been in the family for decades. It was first played by my mother when she was young. This guitar was another
+                gift that Ian recieved and has been putting to good use since.
+            </p>
+        </div>
+        <!--Tabs for Controls and Demonstration information-->
+        <div id="tabs">
+            <ul>
+                <li><a href="#controlsDiv" aria-label="Instrument Controls"><p>Controls</p></a></li>
+                <li><a href="#demoDiv" aria-label="Instrument Demonstration"><p>Demonstration</p></a></li>
+            </ul>
+            <!--Demonstration tab-->
+            <div id="demoDiv" class="div">
+                <p id="demoText" class="p">Below is a demo of what Ian can do with this guitar. Give it a shot and let us know how it goes!</p><br/>
+                <audio controls id="demoAudio" class="audio">
+                    <source src="demos/BassDemo.wav" type="audio/wav" id="demoWav" class="audioFile">
+                    Your browser does not support the audio tag.
+                </audio><br/>
+                </div>
+            <!--Controls tab-->
+            <div id="controlsDiv" class="div">
+                <p id="controlText" class="p">To play the instrument, click on the strings where you would like to play a note or view the keyboard controls below. The notes are split into 3 frets of each string at the open, 7th, and 12th fret. Give it a try by clicking the 'S' key to play the A string at the 7th fret.</p>
+                <!--Table to display the keyboard controls-->
+                <table id="controlTable" class="controlTable">
+                    <!--table label-->
+                    <tr id="controlRow" class="controlRow">
+                        <th id="controlHeader" class="controlHeader" colspan="5">Controls</th>
+                    </tr>
+                    <!--note labels-->
+                    <tr id="notecontrolRow" class="controlRow">
+                        <th id="NoteCol" class="controlColumn" rowspan="1">Note</th>
+                        <td id="ELow_note" class="Note">E</td>
+                        <td id="A_note" class="Note">A</td>
+                        <td id="D_note" class="Note">D</td>
+                        <td id="G_note" class="Note">G</td>
+                    </tr>
+                    <!--keyboard inputs for open note-->
+                    <tr id="openRow" class="controlRow">
+                        <th id="keyInput" class="controlColumn" rowspan="3">Keyboard Input</th>
+                        <td id="Q" class="key">Q</td>
+                        <td id="W" class="key">W</td>
+                        <td id="E" class="key">E</td>
+                        <td id="R" class="key">R</td>
+                    </tr>
+                    <!--keyboard inputs for 7th fret-->
+                    <tr id="7Row" class="controlRow">
+                        <td id="A" class="key">A</td>
+                        <td id="S" class="key">S</td>
+                        <td id="D" class="key">D</td>
+                        <td id="F" class="key">F</td>
+                    </tr>
+                    <!--keyboard inputs for 12th fret-->
+                    <tr id="12Row" class="controlRow">
+                        <td id="Z" class="key">Z</td>
+                        <td id="X" class="key">X</td>
+                        <td id="C" class="key">C</td>
+                        <td id="V" class="key">V</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--instrument section of the page-->
+        <div id="instrumentDiv" class="div">
+            <img src="images/bass_outlined_90_trim.png" alt="acoustic guitar" id="acousticImg" class="instrumentImage" usemap="#strings" aria-label="Bass Guitar">
+            <!--mapping for clickable boxes to outline the areas of the strings a sound will be played from-->
+            <map name="strings">
+                <!--Low E-->
+                <area id="1-0ELow" shape="poly" coords="440,188,665,199,665,210,438,205" href="#" alt="0_E_Low" class="note">
+                <area id="2-7ELow" shape="poly" coords="666,199,900,208,900,218,666,209" href="#" alt="7_E_Low" class="note">
+                <area id="3-12ELow" shape="poly" coords="901,208,1235,216,1235,230,901,217" href="#" alt="12_E_Low" class="note">
+                <!--B-->
+                <area id="4-0A" shape="poly" coords="438,206,665,211,665,230,438,224" href="#" alt="0_A" class="note">
+                <area id="5-7A" shape="poly" coords="666,211,900,219,900,235,666,230" href="#" alt="7_A" class="note">
+                <area id="6-12A" shape="poly" coords="901,218,1235,231,1235,243,901,234" href="#" alt="12_A" class="note">
+                <!--G-->
+                <area id="7-0D" shape="poly" coords="438,225,665,231,665,252,438,247" href="#" alt="0_D" class="note">
+                <area id="8-7D" shape="poly" coords="666,231,900,236,900,254,666,252" href="#" alt="7_D" class="note">
+                <area id="9-12D" shape="poly" coords="901,236,1235,244,1235,258,901,254" href="#" alt="12_D" class="note">
+                <!--D-->
+                <area id="10-0G" shape="poly" coords="438,248,665,253,665,268,438,268" href="#" alt="0_G" class="note">
+                <area id="11-7G" shape="poly" coords="666,253,900,255,900,270,666,268" href="#" alt="7_G" class="note">
+                <area id="12-12G" shape="poly" coords="901,255,1235,259,1235,270,901,270" href="#" alt="12_G" class="note">
+            </map>
+            <!--stores the audio files used for the map-->
+            <div id="audioFiles"></div>
+        </div>
+        <br/>
+    </main>
+    <!--footer with navigation links-->
+    <footer id="footer" class="footer">
+        <a href="instrumentsOverview.html" id="linkPg1" class="footerNavi">Instruments Overview</a><br/>
+        <a href="about.html" id="linkPg2" class="footerNavi">About</a><br/>
+        <a href="contact.html" id="linkPg3" class="footerNavi">Contact</a><br/>
+    </footer>
+</body>

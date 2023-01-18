@@ -1,0 +1,77 @@
+<!doctype html>
+
+<html lang="en">
+
+<head id="head" class="head">
+    <meta charset="utf-8">
+	<title>Ian's Instruments</title>
+	<link rel="stylesheet" href="overview.css" />
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="navigation.js"></script>
+    <script src="overview.js"></script>
+</head>
+
+<body id="body" class="body">
+    <main id="main" class="main">
+        <!--page header-->
+        <header id="pageTitle" class="header"><h1 id="h1" class="header"><a id="headerLink" href="index.html">Ian's Instruments</a></h1>
+            <noscript>Please enable javascript to use this webpage.</noscript>
+        </header>
+        <!--navigation bar-->
+        <nav id="navigationBar" class="navBar">
+            <div id="navBarDiv" class="div">
+                <table id="navTable" class="navTable">
+                    <tr id="naviRow" class="naviRow">
+                        <td><a href="index.html" id="linkHome" class="navi">Home</a></td>
+                        <td>
+                            <!--drop down menu to allow for better navigation to instruments
+                                functionality sourced from https://www.plus2net.com/javascript_tutorial/dropdown-redirect.php-->
+                            <select id="dropdownMenu" class="dropdownMenu">
+                                <option value="Instruments" selected disabled hidden>Instruments</option>
+                                <option value="Instruments Overview" id="insOve" class="menuOption">Instruments Overview</option>
+                                <option value="Acoustic Guitar" id="acoGui" class="menuOption">Acoustic Guitar</option>
+                                <option value="Bass Guitar" id="bassGui" class="menuOption">Bass Guitar</option>
+                                <option value="Electric Guitar" id="eleGui" class="menuOption">Electric Guitar</option>
+                            </select>
+                        </td>
+                        <td><a href="about.html" id="linkAbout" class="navi">About</a></td>
+                        <td><a href="contact.html" id="linkContact" class="navi">Contact</a></td>
+                    </tr>
+                </table>
+            </div>
+        </nav>
+        <!--Intro section of the page-->
+        <div id="introDiv" class="div">
+            <h2>Instruments Overview!</h2>
+            <p id="introText" class="p">Below are some of the instruments that Ian plays. To play an instrument, click on one of the following options. 
+            </p>
+        </div>
+        <!--instruments section-->
+        <div id="instrumentsDiv" class="instrumentsDiv">
+            <!--
+            acoustic guitar
+            <div id="acousticGuitar" class="instrument">
+                <p id="acousticText" class="p">Acoustic Guitar</p>
+                <img src="images/acoustic_outlined.png" class="instrumentImage" alt="acoustic.html">
+            </div>
+            bass guitar
+            <div id="bassGuitar" class="instrument">
+                <p id="bassText" class="p">Bass Guitar</p>
+                <img src="images/bass_outlined.png" class="instrumentImage" alt="bass.html">
+            </div>
+            electric guitar
+            <div id="electricGuitar" class="instrument">
+                <p id="electricText" class="p">Electric Guitar</p>
+                <img src="images/electric_outlined.png" class="instrumentImage" alt="electric.html">
+            </div>-->
+        </div>
+        <br/>
+    </main>
+    <!--footer with navigation links-->
+    <footer id="footer" class="footer">
+        <a href="instrumentsOverview.html" id="linkPg1" class="footerNavi">Instruments Overview</a><br/>
+        <a href="about.html" id="linkPg2" class="footerNavi">About</a><br/>
+        <a href="contact.html" id="linkPg3" class="footerNavi">Contact</a><br/>
+    </footer>
+</body>
